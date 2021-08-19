@@ -8,7 +8,7 @@ function Book(title, author, pages, status) {
     this.pages = pages;
     this.status = status;
     this.info = function() {
-        return title + ' by ' + author + ', ' + pages + ' pages, ' + status + '.';        
+        return title + ' by ' + author + ', ' + pages + ' pages.';        
     }
 }
 
@@ -26,7 +26,6 @@ function addBookToLibrary() {
     } else {
         status = false;
     }
-    //    let status = checkStatus(document.getElementById("status"));
     let newBook = new Book(title, author, pages, status);
     myLibrary.push(newBook);
     renderBook(newBook);
