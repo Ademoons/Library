@@ -2,16 +2,41 @@ const addBookBtn = document.getElementById("addBookBtn").addEventListener("click
 
 let myLibrary = [];
 
-function Book(title, author, pages, status) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.status = status;
-    this.info = function() {
-        return title + ' by ' + author + ', ' + pages + ' pages.';        
+class Book {
+    constructor (title, author, pages, status) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.status = status;
+        this.info = function() {
+            return title + ' by ' + author + ', ' + pages + ' pages.';        
+        }
+    }
+    get title() {
+        return this._title;
+    }
+    get author() {
+        return this._author;
+    }
+    get pages() {
+        return this._pages;
+    }
+    get status() {
+        return this._status;
+    }    
+    set title(value1) {
+        this._title = value1;
+    }
+    set author(value2) {
+        this._author = value2;
+    }
+    set pages(value3) {
+        this._pages = value3;
+    }
+    set status(value4) {
+        this._status = value4;
     }
 }
-
 
 // adds to library array
 
